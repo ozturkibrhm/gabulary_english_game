@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="assets/"
+  data-template="vertical-menu-template-no-customizer"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+
+    <title>Tables - Basic Tables | Vuexy - Bootstrap Admin Template</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/img/favicon/favicon.ico"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="assets/vendor/fonts/tabler-icons.css" />
+    <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/rtl/core.css" />
+    <link rel="stylesheet" href="assets/vendor/css/rtl/theme-default.css" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/node-waves/node-waves.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/typeahead-js/typeahead.css"
+    />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assets/js/config.js"></script>
+  </head>
+
+  <body class style>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside
+          id="layout-menu"
+          class="layout-menu menu-vertical menu bg-menu-theme"
+        >
+          <div class="app-brand demo">
+            <a href="basic-category-management.html" class="app-brand-link">
+              <span class="app-brand-text demo menu-text fw-bold"
+                >GABULARY</span
+              >
+            </a>
+            <a
+              href="javascript:void(0);"
+              class="layout-menu-toggle menu-link text-large ms-auto"
+            >
+              <i
+                class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"
+              ></i>
+              <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <li class="menu-item">
+              <a href="index.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Dashboard" style="margin-left: 10px">
+                  Dashboard
+                </div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Basic Settings" style="margin-left: 10px">
+                  Basic Settings
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="basic-category-management.html" class="menu-link">
+                    <div data-i18n="Category Management">
+                      Category Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-level-range-management.html" class="menu-link">
+                    <div data-i18n="Level Range Management">
+                      Level Range Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-level-exp-management.html" class="menu-link">
+                    <div data-i18n="Level-Exp. Management">
+                      Level-Exp. Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-prize-management.html" class="menu-link">
+                    <div data-i18n="Prize Management">Prize Management</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Layouts -->
+            <li class="menu-item">
+              <a href="vocabulary-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div
+                  data-i18n="Vocabulary Management"
+                  style="margin-left: 10px"
+                >
+                  Vocabulary Management
+                </div>
+              </a>
+            </li>
+            <!-- e-commerce-app menu start -->
+            <li class="menu-item">
+              <a href="quiz-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Quiz Management" style="margin-left: 10px">
+                  Quiz Management
+                </div>
+              </a>
+            </li>
+            <!-- Academy menu start -->
+            <li class="menu-item">
+              <a href="course-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Course Management" style="margin-left: 10px">
+                  Course Management
+                </div>
+              </a>
+            </li>
+            <!-- Academy menu end -->
+            <li class="menu-item">
+              <a href="game-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Game Management" style="margin-left: 10px">
+                  Game Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="task-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Task Management" style="margin-left: 10px">
+                  Task Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="video-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Video Management" style="margin-left: 10px">
+                  Video Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Store Management" style="margin-left: 10px">
+                  Store Management
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="store-item-management.html" class="menu-link">
+                    <div data-i18n="Item Management">Item Management</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="store-campaing-management.html" class="menu-link">
+                    <div data-i18n="Campaign Management">
+                      Campaign Management
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="avatar-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Avatar Management" style="margin-left: 10px">
+                  Avatar Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item active open">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div
+                  data-i18n="Help & Support and Policy Management"
+                  style="margin-left: 10px"
+                >
+                  Help & Support and Policy Management
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="help-support.html" class="menu-link">
+                    <div data-i18n="Help & Support">Help & Support</div>
+                  </a>
+                </li>
+                <li class="menu-item active">
+                  <a href="help-policy%20.html" class="menu-link">
+                    <div data-i18n="Policy">Policy</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="user-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="User Management" style="margin-left: 10px">
+                  User Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="payment-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Payment Management" style="margin-left: 10px">
+                  Payment Management
+                </div>
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <div class="layout-page">
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div
+              class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none"
+            >
+              <a
+                class="nav-item nav-link px-0 me-xl-4"
+                href="javascript:void(0)"
+              >
+                <i class="ti ti-menu-2 ti-sm"></i>
+              </a>
+            </div>
+
+            <div
+              class="navbar-nav-right d-flex align-items-center"
+              id="navbar-collapse"
+            >
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown"
+                  >
+                    <div class="avatar avatar-online">
+                      <img
+                        src="assets/img/avatars/1.png"
+                        alt=""
+                        class="h-auto rounded-circle"
+                      />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-account.html"
+                      >
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <img
+                                src="assets/img/avatars/1.png"
+                                alt=""
+                                class="h-auto rounded-circle"
+                              />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-medium d-block">John Doe</span>
+                            <small class="text-muted">Admin</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-profile-user.html">
+                        <i class="ti ti-user-check me-2 ti-sm"></i>
+                        <span class="align-middle">My Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-account.html"
+                      >
+                        <i class="ti ti-settings me-2 ti-sm"></i>
+                        <span class="align-middle">Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-billing.html"
+                      >
+                        <span class="d-flex align-items-center align-middle">
+                          <i
+                            class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"
+                          ></i>
+                          <span class="flex-grow-1 align-middle">Billing</span>
+                          <span
+                            class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20"
+                            >2</span
+                          >
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-faq.html">
+                        <i class="ti ti-help me-2 ti-sm"></i>
+                        <span class="align-middle">FAQ</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-pricing.html">
+                        <i class="ti ti-currency-dollar me-2 ti-sm"></i>
+                        <span class="align-middle">Pricing</span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="auth-login-cover.html"
+                        target="_blank"
+                      >
+                        <i class="ti ti-logout me-2 ti-sm"></i>
+                        <span class="align-middle">Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+
+            <!-- Search Small Screens -->
+            <div class="navbar-search-wrapper search-input-wrapper d-none">
+              <input
+                type="text"
+                class="form-control search-input container-xxl border-0"
+                placeholder="Search..."
+                aria-label="Search..."
+              />
+              <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
+            </div>
+          </nav>
+          <div class="content-wrapper">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="card">
+                <div class="card-body">
+                  <div class="col row">
+                    <div class="col-2 mt-2">
+                      <a
+                        class="ti ti-edit me-3 fs-4"
+                        href="javascript:void(0);"
+                        tabindex="0"
+                        aria-controls="DataTables_Table_0"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#edit1"
+                      ></a>
+                      <a
+                        class="ti ti-trash me-3"
+                        href="javascript:void(0);"
+                        data-bs-toggle="modal"
+                        data-bs-target="#delete"
+                      ></a>
+                    </div>
+                    <div class="col-8">
+                      <div class="col-xl">
+                        <div
+                          class="accordion stick-top accordion-bordered course-content-fixed"
+                          id="courseContent"
+                        >
+                          <div class="accordion-item mb-0 active">
+                            <div class="accordion-header" id="headingOne">
+                              <button
+                                type="button"
+                                class="accordion-button bg-lighter rounded-0"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#chapterOne"
+                                aria-expanded="true"
+                                aria-controls="chapterOne"
+                              >
+                                <span class="d-flex flex-column">
+                                  <span class="h5 mb-1"style="font-weight: bold;"
+                                    >Personal Data Protection Law</span
+                                  >
+                                </span>
+                              </button>
+                            </div>
+                            <div
+                              id="chapterOne"
+                              class="accordion-collapse collapse show"
+                              data-bs-parent="#courseContent"
+                              style
+                            >
+                              <div class="accordion-body py-3 border-top">
+                                <div id="accordionProduct" class="accordion">
+                                  <h5 class="accordion-header">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat.
+                                  </h5>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="dt-buttons btn-group flex-wrap">
+                        <button
+                          class="btn btn-secondary add-new btn-primary ms-2"
+                          tabindex="0"
+                          aria-controls="DataTables_Table_0"
+                          type="button"
+                          data-bs-toggle="offcanvas"
+                          data-bs-target="#offcanvasEcommerceCategoryList"
+                        >
+                          <span
+                            ><i class="ti ti-plus ti-xs me-0 me-sm-2"></i
+                            ><span class="d-none d-sm-inline-block"></span
+                          ></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col row">
+                    <div class="col-2 mt-2">
+                      <a
+                        class="ti ti-edit me-3 fs-4"
+                        href="javascript:void(0);"
+                        tabindex="0"
+                        aria-controls="DataTables_Table_0"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#edit2"
+                      ></a>
+                      <a
+                        class="ti ti-trash me-3"
+                        href="javascript:void(0);"
+                        data-bs-toggle="modal"
+                        data-bs-target="#delete"
+                      ></a>
+                    </div>
+                    <div class="col-8">
+                      <div class="col-xl">
+                        <div
+                          class="accordion stick-top accordion-bordered course-content-fixed"
+                          id="courseContent1"
+                        >
+                          <div class="accordion-item mb-0">
+                            <div class="accordion-header" id="headingTwo">
+                              <button
+                                type="button"
+                                class="bg-lighter rounded-0 accordion-button collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#chapterTwo"
+                                aria-expanded="false"
+                                aria-controls="chapterTwo"
+                              >
+                                <span class="d-flex flex-column">
+                                  <span class="h5 mb-1"style="font-weight: bold;">Privacy Policy</span>
+                                </span>
+                              </button>
+                            </div>
+                            <div
+                              id="chapterTwo"
+                              class="accordion-collapse collapse"
+                              data-bs-parent="#courseContent"
+                              style
+                            >
+                              <div class="accordion-body py-3 border-top">
+                                <div id="accordionProduct" class="accordion">
+                                  <h5 class="accordion-header">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat.
+                                  </h5>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col row">
+                    <div class="col-2 mt-2">
+                      <a
+                        class="ti ti-edit me-3 fs-4"
+                        href="javascript:void(0);"
+                        tabindex="0"
+                        aria-controls="DataTables_Table_0"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#"
+                      ></a>
+                      <a
+                        class="ti ti-trash me-3"
+                        href="javascript:void(0);"
+                        data-bs-toggle="modal"
+                        data-bs-target="#delete"
+                      ></a>
+                    </div>
+                    <div class="col-8">
+                      <div class="col-xl">
+                        <div
+                          class="accordion stick-top accordion-bordered course-content-fixed"
+                          id="courseContent1"
+                        >
+                          <div class="accordion-item mb-0">
+                            <div class="accordion-header" id="headingThree">
+                              <button
+                                type="button"
+                                class="bg-lighter rounded-0 accordion-button collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#chapterThree"
+                                aria-expanded="false"
+                                aria-controls="chapterThree"
+                              >
+                                <span class="d-flex flex-column">
+                                  <span class="h5 mb-1"style="font-weight: bold;"
+                                    >Distance Sales Contract</span
+                                  >
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Add Avatar-->
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasEcommerceCategoryList"
+                aria-labelledby="offcanvasEcommerceCategoryListLabel"
+                aria-modal="true"
+                role="dialog"
+                style="width: 900px"
+              >
+                <div class="offcanvas-header py-4">
+                  <h5
+                    id="offcanvasEcommerceCategoryListLabel"
+                    class="offcanvas-title"
+                  >
+                  Add Policy
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close bg-label-secondary text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+
+                <div class="offcanvas-body border-top">
+                  <div class="card-body">
+                    <div class="mb-3 row">
+                      <label for="html5-text-input" class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                        >Category*:</label
+                      >
+                      <div class="col-md-8 col-sm-12">
+                        <input
+                          class="form-control"
+                          type="text"
+                          value=""
+                          id=""
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="html5-text-input" class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                        >Description*:</label
+                      >
+                      <div class="col-md-8 col-sm-12">
+                        <textarea
+                          class="form-control"
+                          style="height: 100px"
+                          id=""
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form>
+                    <div class="mb-3 text-end mt-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary me-sm-3 me-1 data-submit waves-effect waves-light"
+                      >
+                        SAVE
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!--Edit-->
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="edit2"
+                aria-labelledby="offcanvasEcommerceCategoryListLabel"
+                aria-modal="true"
+                role="dialog"
+                style="width: 600px"
+              >
+                <div class="offcanvas-header py-4">
+                  <h5
+                    id="offcanvasEcommerceCategoryListLabel"
+                    class="offcanvas-title"
+                  >
+                    Update Policy
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close bg-label-secondary text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body border-top">
+                  <div class="card-body">
+                    <div class="mb-3 row">
+                      <label for="html5-text-input" class="col-4 col-form-label"style="font-weight: bold;"
+                        >Category:</label
+                      >
+                      <div class="col-8">
+                        <input
+                          class="form-control"
+                          type="text"
+                          value="Privacy Policy"
+                          id=""
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="html5-text-input" class="col-4 col-form-label"style="font-weight: bold;"
+                        >Description*:</label
+                      >
+                      <div class="col-8">
+                        <textarea
+                          class="form-control"
+                          style="height: 100px"
+                          id=""
+                        >
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <form>
+                    <div class="mb-3 text-end mt-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary me-sm-3 me-1 data-submit waves-effect waves-light"
+                      >
+                        UPDATE
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!--Edit1-->
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="edit1"
+                aria-labelledby="offcanvasEcommerceCategoryListLabel"
+                aria-modal="true"
+                role="dialog"
+                style="width: 600px"
+              >
+                <div class="offcanvas-header py-4">
+                  <h5
+                    id="offcanvasEcommerceCategoryListLabel"
+                    class="offcanvas-title"
+                  >
+                    Update Policy
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close bg-label-secondary text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body border-top">
+                  <div class="card-body">
+                    <div class="mb-3 row">
+                      <label for="html5-text-input" class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                        >Category*:</label
+                      >
+                      <div class="col-md-8 col-sm-12">
+                        <input
+                          class="form-control"
+                          type="text"
+                          value="Personal Data Protection Law"
+                          id=""
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="html5-text-input" class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                        >Description*:</label
+                      >
+                      <div class="col-md-8 col-sm-12">
+                        <textarea
+                          class="form-control"
+                          style="height: 100px"
+                          id=""
+                        >
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <form>
+                    <div class="mb-3 text-end mt-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary me-sm-3 me-1 data-submit waves-effect waves-light"
+                      >
+                        UPDATE
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div
+                class="modal fade"
+                id="delete"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+                  <div class="modal-content p-2">
+                    <div class="modal-body">
+                      <div class="text-center mb-4">
+                        <p style="font-size: 18px">
+                          It will be permanently deleted. Should the process
+                          continue?
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-end">
+                        <button
+                          type="reset"
+                          class="btn btn-label-secondary btn-reset waves-effect me-2 btn-sm"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          QUIT
+                        </button>
+                        <button
+                          type="submit"
+                          class="btn btn-primary waves-effect waves-light btn-sm"
+                        >
+                          YES
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-backdrop fade"></div>
+            </div>
+          </div>
+
+          <div class="layout-overlay layout-menu-toggle"></div>
+          <div class="drag-target"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="assets/vendor/libs/popper/popper.js"></script>
+    <script src="assets/vendor/js/bootstrap.js"></script>
+    <script src="assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="assets/vendor/js/menu.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#task-select").change(function () {
+          var selectedValue = $(this).val();
+          $(".dynamic-section").addClass("d-none"); // Hide all sections
+          if (selectedValue) {
+            $("#" + selectedValue).removeClass("d-none"); // Show selected section
+          }
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#task-select1").change(function () {
+          var selectedValue = $(this).val();
+          $(".dynamic-section").addClass("d-none"); // Hide all sections
+          if (selectedValue) {
+            $("#" + selectedValue).removeClass("d-none"); // Show selected section
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

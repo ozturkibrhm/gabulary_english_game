@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="assets/"
+  data-template="vertical-menu-template-no-customizer"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/vendor/libs/quill/typography.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/quill/katex.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/quill/editor.css" />
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
+   
+
+    <title>Tables - Basic Tables | Vuexy - Bootstrap Admin Template</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/img/favicon/favicon.ico"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="assets/vendor/fonts/tabler-icons.css" />
+    <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/rtl/core.css" />
+    <link rel="stylesheet" href="assets/vendor/css/rtl/theme-default.css" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="assets/vendor/libs/select2/select2.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/bootstrap-select/bootstrap-select.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/node-waves/node-waves.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/jquery-timepicker/jquery-timepicker.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/typeahead-js/typeahead.css"
+    />
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assets/js/config.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body class style>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside
+          id="layout-menu"
+          class="layout-menu menu-vertical menu bg-menu-theme"
+        >
+          <div class="app-brand demo">
+            <a href="basic-category-management.html" class="app-brand-link">
+              <span class="app-brand-text demo menu-text fw-bold"
+                >GABULARY</span
+              >
+            </a>
+
+            <a
+              href="javascript:void(0);"
+              class="layout-menu-toggle menu-link text-large ms-auto"
+            >
+              <i
+                class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"
+              ></i>
+              <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <li class="menu-item">
+              <a href="index.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Dashboard" style="margin-left: 10px">
+                  Dashboard
+                </div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Basic Settings" style="margin-left: 10px">
+                  Basic Settings
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="basic-category-management.html" class="menu-link">
+                    <div data-i18n="Category Management">
+                      Category Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-level-range-management.html" class="menu-link">
+                    <div data-i18n="Level Range Management">
+                      Level Range Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-level-exp-management.html" class="menu-link">
+                    <div data-i18n="Level-Exp. Management">
+                      Level-Exp. Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-prize-management.html" class="menu-link">
+                    <div data-i18n="Prize Management">Prize Management</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Layouts -->
+            <li class="menu-item">
+              <a href="vocabulary-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div
+                  data-i18n="Vocabulary Management"
+                  style="margin-left: 10px"
+                >
+                  Vocabulary Management
+                </div>
+              </a>
+            </li>
+            <!-- e-commerce-app menu start -->
+            <li class="menu-item">
+              <a href="quiz-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Quiz Management" style="margin-left: 10px">
+                  Quiz Management
+                </div>
+              </a>
+            </li>
+            <!-- Academy menu start -->
+            <li class="menu-item">
+              <a href="course-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Course Management" style="margin-left: 10px">
+                  Course Management
+                </div>
+              </a>
+            </li>
+            <!-- Academy menu end -->
+            <li class="menu-item">
+              <a href="game-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Game Management" style="margin-left: 10px">
+                  Game Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="task-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Task Management" style="margin-left: 10px">
+                  Task Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="video-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Video Management" style="margin-left: 10px">
+                  Video Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item active open">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Store Management" style="margin-left: 10px">
+                  Store Management
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="store-item-management.html" class="menu-link">
+                    <div data-i18n="Item Management">Item Management</div>
+                  </a>
+                </li>
+                <li class="menu-item active">
+                  <a href="store-campaing-management.html" class="menu-link">
+                    <div data-i18n="Campaign  Management">
+                      Campaign  Management
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="avatar-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Avatar Management" style="margin-left: 10px">
+                  Avatar Management
+                </div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div
+                  data-i18n="Help & Support and Policy Management"
+                  style="margin-left: 10px"
+                >
+                  Help & Support and Policy Management
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="help-support.html" class="menu-link">
+                    <div data-i18n="Help & Support">Help & Support</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="help-policy%20.html" class="menu-link">
+                    <div data-i18n="Policy">Policy</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="user-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="User Management" style="margin-left: 10px">
+                  User Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="payment-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Payment Management" style="margin-left: 10px">
+                  Payment Management
+                </div>
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <div class="layout-page">
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div
+              class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none"
+            >
+              <a
+                class="nav-item nav-link px-0 me-xl-4"
+                href="javascript:void(0)"
+              >
+                <i class="ti ti-menu-2 ti-sm"></i>
+              </a>
+            </div>
+
+            <div
+              class="navbar-nav-right d-flex align-items-center"
+              id="navbar-collapse"
+            >
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown"
+                  >
+                    <div class="avatar avatar-online">
+                      <img
+                        src="assets/img/avatars/1.png"
+                        alt=""
+                        class="h-auto rounded-circle"
+                      />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-account.html"
+                      >
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <img
+                                src="../../assets/img/avatars/1.png"
+                                alt=""
+                                class="h-auto rounded-circle"
+                              />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-medium d-block">John Doe</span>
+                            <small class="text-muted">Admin</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-profile-user.html">
+                        <i class="ti ti-user-check me-2 ti-sm"></i>
+                        <span class="align-middle">My Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-account.html"
+                      >
+                        <i class="ti ti-settings me-2 ti-sm"></i>
+                        <span class="align-middle">Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-billing.html"
+                      >
+                        <span class="d-flex align-items-center align-middle">
+                          <i
+                            class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"
+                          ></i>
+                          <span class="flex-grow-1 align-middle">Billing</span>
+                          <span
+                            class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20"
+                            >2</span
+                          >
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-faq.html">
+                        <i class="ti ti-help me-2 ti-sm"></i>
+                        <span class="align-middle">FAQ</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-pricing.html">
+                        <i class="ti ti-currency-dollar me-2 ti-sm"></i>
+                        <span class="align-middle">Pricing</span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="auth-login-cover.html"
+                        target="_blank"
+                      >
+                        <i class="ti ti-logout me-2 ti-sm"></i>
+                        <span class="align-middle">Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+
+            <!-- Search Small Screens -->
+            <div class="navbar-search-wrapper search-input-wrapper d-none">
+              <input
+                type="text"
+                class="form-control search-input container-xxl border-0"
+                placeholder="Search..."
+                aria-label="Search..."
+              />
+              <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
+            </div>
+          </nav>
+          <div class="content-wrapper">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="card">
+                <div class="card-body">
+                  <div class="mt-4"></div>
+                  <div class="col-12 mb-3 row">
+                    <div class="col-5">
+                      <input
+                        class="form-control"
+                        type="date"
+                        value=""
+                        id="html5-date-input"
+                      />
+                    </div>
+                    <div class="col-5">
+                      <input
+                        class="form-control"
+                        type="date"
+                        value=""
+                        id="html5-date-input"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between app-academy-md-80"
+                  >
+                    <div class="col-11 pe-2 m-n2">
+                      <input
+                        type="search"
+                        placeholder="Enter your text for filtering"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col-lg-1 col-md-1 m-n2">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-icon waves-effect waves-light w-100"
+                      >
+                        Filters
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mt-4"></div>
+                  <div class="d-flex justify-content-end">
+                    <div class="dt-buttons btn-group flex-wrap">
+                      <button
+                        class="btn btn-secondary add-new btn-primary ms-2"
+                        tabindex="0"
+                        aria-controls="DataTables_Table_0"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasEcommerceCategoryList"
+                      >
+                        <span
+                          ><i class="ti ti-plus ti-xs me-0 me-sm-2"></i
+                          ><span class="d-none d-sm-inline-block"
+                            >Add Campaign </span
+                          ></span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mt-4"></div>
+
+                  <div class="table-responsive">
+                    <table class="table table-bordered w-100 height">
+                      <thead>
+                        <tr>
+                          <th style="font-weight: bold;">Details</th>
+                          <th style="font-weight: bold;">Edit</th>
+                          <th style="font-weight: bold;">Delete</th>
+                          <th style="font-weight: bold;">Status</th>
+                          <th style="font-weight: bold;">Start Date</th>
+                          <th style="font-weight: bold;">End Date</th>
+                          <th style="font-weight: bold;">Campaign  Title</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <a
+                              href=" javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUser"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-pencil me-3"
+                              href="javascript:void(0);"
+                              tabindex="0"
+                              aria-controls="DataTables_Table_0"
+                              type="button"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edit1"
+                            ></a>
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-trash me-3"
+                              href="javascript:void(0);"
+                              data-bs-toggle="modal"
+                              data-bs-target="#delete"
+                            ></a>
+                          </td>
+                          <td>
+                            <div class="form-switch" style="position: sticky; left: 0;">
+                              <input
+                                class="form-check-input float-start me-3"
+                                type="checkbox"
+                                checked
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-01-01"
+                              ıd="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-01-10"
+                              ıd="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>Campaign  A</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a
+                              href=" javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUser1"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-pencil me-3"
+                              href="javascript:void(0);"
+                              tabindex="0"
+                              aria-controls="DataTables_Table_0"
+                              type="button"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edit1"
+                            ></a>
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-trash me-3"
+                              href="javascript:void(0);"
+                              data-bs-toggle="modal"
+                              data-bs-target="#delete"
+                            ></a>
+                          </td>
+                          <td>
+                            <div class="form-switch" style="position: sticky; left: 0;">
+                              <input
+                                class="form-check-input float-start me-3"
+                                type="checkbox"
+                                checked
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-02-01"
+                              readonly
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-02-10"
+                              ıd="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>Campaign  B</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a
+                              href=" javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUser"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-pencil me-3"
+                              href="javascript:void(0);"
+                              tabindex="0"
+                              aria-controls="DataTables_Table_0"
+                              type="button"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edit1"
+                            ></a>
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-trash me-3"
+                              href="javascript:void(0);"
+                              data-bs-toggle="modal"
+                              data-bs-target="#delete"
+                            ></a>
+                          </td>
+                          <td>Passive</td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-03-01"
+                              readonly
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-03-10"
+                              ıd="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>Campaign  C</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a
+                              href=" javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUser"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-pencil me-3"
+                              href="javascript:void(0);"
+                              tabindex="0"
+                              aria-controls="DataTables_Table_0"
+                              type="button"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edit1"
+                            ></a>
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-trash me-3"
+                              href="javascript:void(0);"
+                              data-bs-toggle="modal"
+                              data-bs-target="#delete"
+                            ></a>
+                          </td>
+                          <td>Passive</td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-04-01"
+                              readonly
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-04-10"
+                              ıd="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>Campaign  D</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasEcommerceCategoryList"
+                aria-labelledby="offcanvasEcommerceCategoryListLabel"
+                aria-modal="true"
+                role="dialog"
+                style="width: 750px"
+              >
+                <div class="offcanvas-header py-4">
+                  <h5
+                    id="offcanvasEcommerceCategoryListLabel"
+                    class="offcanvas-title"
+                  >
+                    Add Campaign 
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close bg-label-secondary text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body border-top">
+                  <div class="card-body">
+                    <div class="col">
+                      <div class="mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Campaign  Title* :</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value=""
+                            id=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Start Date*:</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="date"
+                            value=""
+                            id="html5-date-input"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >End Date*:</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="date"
+                            value=""
+                            id="html5-date-input"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mb-3 row">
+                        <label
+                          for="videoDescription"
+                          class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Campaign  Description:</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <textarea
+                            class="form-control"
+                            style="height: 150px"
+                            id="videoDescription"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="alert alert-danger mb-3" role="alert"style="font-weight: bold;">
+                      Item Selection
+                    </div>
+                    <div class="col">
+                      <div class="mb-3 row">
+                        <label for="select2Dark" class="col-md-1 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Item*:</label
+                        >
+                        <div class="col-md-5 col-sm-12 select2-dark">
+                          <select
+                            id="select2Dark"
+                            class="select2 form-select"
+                            multiple
+                          >
+                            <option value="1" selected>Item A</option>
+                            <option value="2" selected>Item B</option>
+                            <option value="3" selected>Item C</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="mb-3">
+                            <div class="input-group">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="Discount Rate"
+                                id=""
+                              />
+                              <div class="input-group-append">
+                                <span class="input-group-text">%</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-1 ">
+                          <div class="mb-3">
+                            <button
+                              class="btn btn-outline-secondary"
+                              type="button"
+                            >
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Butonlar -->
+                    <div class="mt-4"></div>
+                    <form>
+                      <div class="mb-3 text-end">
+                        <button
+                          type="submit"
+                          class="btn btn-primary me-sm-3 me-1 data-submit waves-effect waves-light"
+                        >
+                          SAVE
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="edit1"
+                aria-labelledby="offcanvasEcommerceCategoryListLabel"
+                aria-modal="true"
+                role="dialog"
+                style="width: 750px"
+              >
+                <div class="offcanvas-header py-4">
+                  <h5
+                    id="offcanvasEcommerceCategoryListLabel"
+                    class="offcanvas-title"
+                  >
+                    Update Campaign
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close bg-label-secondary text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body border-top">
+                  <div class="card-body">
+                    <div class="col">
+                      <div class="mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Campaign  Title* :</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value="Campaign  A "
+                            id=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Start Date*:</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="date"
+                            value="2024-01-01"
+                            id="html5-date-input"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >End Date*:</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="date"
+                            value="2024-01-10"
+                            id="html5-date-input"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mb-3 row">
+                        <label
+                          for="videoDescription"
+                          class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Campaign  Description:</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <textarea
+                            class="form-control"
+                            style="height: 150px"
+                            id="videoDescription"
+                          >
+“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="alert alert-danger mb-3" role="alert"style="font-weight: bold;">
+                      Item Selection
+                    </div>
+                    <div class="col">
+                      <div class="mb-3 row">
+                        <label for="select2Dark" class="col-md-1 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Item*:</label
+                        >
+                        <div class="col-md-5 col-sm-12 select2-dark">
+                          <select
+                            id="select2Dark2"
+                            class="select2 form-select"
+                            multiple
+                          >
+                            <option value="1" selected>Item A</option>
+                            <option value="2" selected>Item B</option>
+                            <option value="3" selected>Item C</option>
+                            <option>Item D</option>
+                            <option>Item E</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                          <div class="mb-3">
+                            <div class="input-group">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="70"
+                                id=""
+                              />
+                              <div class="input-group-append">
+                                <span class="input-group-text">%</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-1">
+                          <div class="mb-3">
+                            <button
+                              class="btn btn-outline-secondary"
+                              type="button"
+                            >
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Butonlar -->
+                    <div class="mt-4"></div>
+                    <form>
+                      <div class="mb-3 text-end">
+                        <button
+                          type="submit"
+                          class="btn btn-primary me-sm-3 me-1 data-submit waves-effect waves-light"
+                        >
+                          UPDATE
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!--Details-->
+              <div
+                class="modal fade"
+                id="editUser"
+                tabindex="-1"
+                style="display: none"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-lg modal-simple modal-edit-user">
+                  <div class="modal-content p-2000 p-2000">
+                    <div class="modal-body">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                      <h5 class="card-header"style="font-weight: bold;">Campaign  Details</h5>
+                      <div class="mt-4"></div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="col-md-12 col-sm-12">
+                              <div class="mb-3 row">
+                                <label
+                                  for="html5-text-input"
+                                  class="col-md-4 col-sm-11 col-form-label"style="font-weight: bold;"
+                                  >Campaign  Title:</label
+                                >
+                                <div class="col-md-8 col-sm-12">
+                                  <input
+                                    class="form-control"
+                                    type="text"
+                                    value="Campaign  A"
+                                    id=""
+                                    readonly=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="mb-3 row">
+                                <label
+                                  for="html5-text-input"
+                                  class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                                  >Start Date:</label
+                                >
+                                <div class="col-md-8 col-sm-12">
+                                  <input
+                                    class="form-control"
+                                    type="text"
+                                    value="01 / 01 / 2024"
+                                    id=""
+                                    readonly=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="mb-3 row">
+                                <label
+                                  for="html5-text-input"
+                                  class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                                  >End Date:</label
+                                >
+                                <div class="col-md-8 col-sm-12">
+                                  <input
+                                    class="form-control"
+                                    type="text"
+                                    value="10 / 01 / 2024"
+                                    id=""
+                                    readonly=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="mb-3 row">
+                                <label
+                                  for="html5-text-input"
+                                  class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                                  >Campaign  Description:</label
+                                >
+                                <div class="col-md-8 col-sm-12">
+                                  <textarea
+                                    class="form-control"
+                                    style="height: 100px"
+                                    id=""
+                                    readonly=""
+                                  >
+“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</textarea
+                                  >
+                                </div>
+                              </div>
+                              <div class="mb-3 row">
+                                <label
+                                  for="html5-text-input"
+                                  class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                                  >Selected Items:</label
+                                >
+                                <div class="col-md-8 col-sm-12">
+                                  <textarea
+                                    class="form-control"
+                                    style="height: 100px"
+                                    readonly
+                                  >
+Item A
+Item B
+Item C</textarea
+                                  >
+                                </div>
+                              </div>
+                              <div class="mb-3 row">
+                                <label
+                                  for="html5-text-input"
+                                  class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                                  >Discount Rate:</label
+                                >
+                                <div class="col-md-8 col-sm-12">
+                                  <input
+                                    class="form-control"
+                                    type="text"
+                                    value="%70"
+                                    id=""
+                                    readonly=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="modal fade"
+                id="delete"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+                  <div class="modal-content p-2">
+                    <div class="modal-body">
+                      <div class="text-center mb-4">
+                        <p style="font-size: 18px">
+                          It will be permanently deleted. Should the process
+                          continue?
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-end">
+                        <button
+                          type="reset"
+                          class="btn btn-label-secondary btn-reset waves-effect me-2 btn-sm"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          QUIT
+                        </button>
+                        <button
+                          type="submit"
+                          class="btn btn-primary waves-effect waves-light btn-sm"
+                        >
+                          YES
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="layout-overlay layout-menu-toggle"></div>
+            <div class="drag-target"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/vendor/libs/jquery/jquery.js"></script>
+
+    <!-- jQuery'ye bağımlı kütüphaneler -->
+    <script src="assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+
+    <script src="assets/vendor/libs/popper/popper.js"></script>
+    <script src="assets/vendor/js/bootstrap.js"></script>
+    <script src="assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="assets/vendor/js/menu.js"></script>
+    <!-- Diğer kütüphaneler -->
+    <script src="assets/vendor/libs/select2/select2.js"></script>
+    <script src="assets/vendor/libs/quill/katex.js"></script>
+    <script src="assets/vendor/libs/quill/quill.js"></script>
+    <script src="assets/vendor/libs/dropzone/dropzone.js"></script>
+
+    <!-- Projeye özgü scriptler -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/forms-selects.js"></script>
+
+    <script>
+      // previewTemplate: Updated Dropzone default previewTemplate
+
+      // ! Don't change it unless you really know what you are doing
+
+      const previewTemplate = `<div class="dz-preview dz-file-preview">
+    <div class="dz-details">
+      <div class="dz-thumbnail">
+        <img data-dz-thumbnail>
+        <span class="dz-nopreview">No preview</span>
+        <div class="dz-success-mark"></div>
+        <div class="dz-error-mark"></div>
+        <div class="dz-error-message"><span data-dz-errormessage></span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress></div>
+        </div>
+      </div>
+      <div class="dz-filename" data-dz-name></div>
+      <div class="dz-size" data-dz-size></div>
+    </div>
+    </div>`;
+
+      // ? Start your code from here
+
+      // Basic Dropzone
+
+      const dropzoneBasic = document.querySelector("#dropzone-basic");
+      if (dropzoneBasic) {
+        const myDropzone = new Dropzone(dropzoneBasic, {
+          previewTemplate: previewTemplate,
+          parallelUploads: 1,
+          maxFilesize: 5,
+          acceptedFiles: ".jpg,.jpeg,.png,.gif",
+          addRemoveLinks: true,
+          maxFiles: 1,
+        });
+      }
+    </script>
+
+    <script>
+      // previewTemplate: Updated Dropzone default previewTemplate
+
+      // ! Don't change it unless you really know what you are doing
+
+      const previewTemplate1 = `<div class="dz-preview dz-file-preview">
+    <div class="dz-details">
+      <div class="dz-thumbnail">
+        <img data-dz-thumbnail>
+        <span class="dz-nopreview">No preview</span>
+        <div class="dz-success-mark"></div>
+        <div class="dz-error-mark"></div>
+        <div class="dz-error-message"><span data-dz-errormessage></span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress></div>
+        </div>
+      </div>
+      <div class="dz-filename" data-dz-name></div>
+      <div class="dz-size" data-dz-size></div>
+    </div>
+    </div>`;
+
+      // ? Start your code from here
+
+      // Basic Dropzone
+
+      const dropzoneEdit = document.querySelector("#dropzone-edit");
+      if (dropzoneBasic) {
+        const myDropzone = new Dropzone(dropzoneEdit, {
+          previewTemplate: previewTemplate,
+          parallelUploads: 1,
+          maxFilesize: 5,
+          acceptedFiles: ".jpg,.jpeg,.png,.gif",
+          addRemoveLinks: true,
+          maxFiles: 1,
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="assets/"
+  data-template="vertical-menu-template-no-customizer"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/vendor/libs/quill/typography.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/quill/katex.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/quill/editor.css" />
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
+    
+    <title>Tables - Basic Tables | Vuexy - Bootstrap Admin Template</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/img/favicon/favicon.ico"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="assets/vendor/fonts/tabler-icons.css" />
+    <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/rtl/core.css" />
+    <link rel="stylesheet" href="assets/vendor/css/rtl/theme-default.css" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/node-waves/node-waves.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/jquery-timepicker/jquery-timepicker.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/typeahead-js/typeahead.css"
+    />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assets/js/config.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function openOffcanvas(offcanvasId) {
+        const offcanvas = new bootstrap.Offcanvas(
+          document.getElementById(offcanvasId)
+        );
+        offcanvas.show();
+      }
+    </script>
+  </head>
+
+  <body class style>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside
+          id="layout-menu"
+          class="layout-menu menu-vertical menu bg-menu-theme"
+        >
+          <div class="app-brand demo">
+            <a href="basic-category-management.html" class="app-brand-link">
+              <span class="app-brand-text demo menu-text fw-bold"
+                >GABULARY</span
+              >
+            </a>
+
+            <a
+              href="javascript:void(0);"
+              class="layout-menu-toggle menu-link text-large ms-auto"
+            >
+              <i
+                class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"
+              ></i>
+              <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <li class="menu-item">
+              <a href="index.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Dashboard" style="margin-left: 10px">
+                  Dashboard
+                </div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Basic Settings" style="margin-left: 10px">
+                  Basic Settings
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="basic-category-management.html" class="menu-link">
+                    <div data-i18n="Category Management">
+                      Category Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-level-range-management.html" class="menu-link">
+                    <div data-i18n="Level Range Management">
+                      Level Range Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-level-exp-management.html" class="menu-link">
+                    <div data-i18n="Level-Exp. Management">
+                      Level-Exp. Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-prize-management.html" class="menu-link">
+                    <div data-i18n="Prize Management">Prize Management</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Layouts -->
+            <li class="menu-item">
+              <a href="vocabulary-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div
+                  data-i18n="Vocabulary Management"
+                  style="margin-left: 10px"
+                >
+                  Vocabulary Management
+                </div>
+              </a>
+            </li>
+            <!-- e-commerce-app menu start -->
+            <li class="menu-item">
+              <a href="quiz-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Quiz Management" style="margin-left: 10px">
+                  Quiz Management
+                </div>
+              </a>
+            </li>
+            <!-- Academy menu start -->
+            <li class="menu-item">
+              <a href="course-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Course Management" style="margin-left: 10px">
+                  Course Management
+                </div>
+              </a>
+            </li>
+            <!-- Academy menu end -->
+            <li class="menu-item">
+              <a href="game-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Game Management" style="margin-left: 10px">
+                  Game Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item active open">
+              <a href="task-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Task Management" style="margin-left: 10px">
+                  Task Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="video-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Video Management" style="margin-left: 10px">
+                  Video Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Store Management" style="margin-left: 10px">
+                  Store Management
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="store-item-management.html" class="menu-link">
+                    <div data-i18n="Item Management">Item Management</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="store-campaing-management.html" class="menu-link">
+                    <div data-i18n="Campaign Management">
+                      Campaign Management
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="avatar-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Avatar Management" style="margin-left: 10px">
+                  Avatar Management
+                </div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div
+                  data-i18n="Help & Support and Policy Management"
+                  style="margin-left: 10px"
+                >
+                  Help & Support and Policy Management
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="help-support.html" class="menu-link">
+                    <div data-i18n="Help & Support">Help & Support</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="help-policy%20.html" class="menu-link">
+                    <div data-i18n="Policy">Policy</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="user-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="User Management" style="margin-left: 10px">
+                  User Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="payment-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Payment Management" style="margin-left: 10px">
+                  Payment Management
+                </div>
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <div class="layout-page">
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div
+              class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none"
+            >
+              <a
+                class="nav-item nav-link px-0 me-xl-4"
+                href="javascript:void(0)"
+              >
+                <i class="ti ti-menu-2 ti-sm"></i>
+              </a>
+            </div>
+
+            <div
+              class="navbar-nav-right d-flex align-items-center"
+              id="navbar-collapse"
+            >
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown"
+                  >
+                    <div class="avatar avatar-online">
+                      <img
+                        src="assets/img/avatars/1.png"
+                        alt=""
+                        class="h-auto rounded-circle"
+                      />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-account.html"
+                      >
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <img
+                                src="assets/img/avatars/1.png"
+                                alt=""
+                                class="h-auto rounded-circle"
+                              />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-medium d-block">John Doe</span>
+                            <small class="text-muted">Admin</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-profile-user.html">
+                        <i class="ti ti-user-check me-2 ti-sm"></i>
+                        <span class="align-middle">My Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-account.html"
+                      >
+                        <i class="ti ti-settings me-2 ti-sm"></i>
+                        <span class="align-middle">Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-billing.html"
+                      >
+                        <span class="d-flex align-items-center align-middle">
+                          <i
+                            class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"
+                          ></i>
+                          <span class="flex-grow-1 align-middle">Billing</span>
+                          <span
+                            class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20"
+                            >2</span
+                          >
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-faq.html">
+                        <i class="ti ti-help me-2 ti-sm"></i>
+                        <span class="align-middle">FAQ</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-pricing.html">
+                        <i class="ti ti-currency-dollar me-2 ti-sm"></i>
+                        <span class="align-middle">Pricing</span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="auth-login-cover.html"
+                        target="_blank"
+                      >
+                        <i class="ti ti-logout me-2 ti-sm"></i>
+                        <span class="align-middle">Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+
+            <!-- Search Small Screens -->
+            <div class="navbar-search-wrapper search-input-wrapper d-none">
+              <input
+                type="text"
+                class="form-control search-input container-xxl border-0"
+                placeholder="Search..."
+                aria-label="Search..."
+              />
+              <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
+            </div>
+          </nav>
+          <div class="content-wrapper">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="card">
+                <div class="card-body">
+                  <div class="mt-4"></div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-between app-academy-md-80"
+                  >
+                    <div class="col-11 pe-2 m-n2">
+                      <input
+                        type="search"
+                        placeholder="Enter your text for filtering"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col-lg-1 col-md-1 m-n2">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-icon waves-effect waves-light w-100"
+                      >
+                        Filters
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mt-4"></div>
+
+                  <div class="d-flex justify-content-end">
+                    <div class="dt-buttons btn-group flex-wrap">
+                      <button
+                        class="btn btn-secondary add-new btn-primary ms-2"
+                        tabindex="0"
+                        aria-controls="DataTables_Table_0"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasEcommerceCategoryList"
+                      >
+                        <span>
+                          <i class="ti ti-plus ti-xs me-0 me-sm-2"></i>
+                          <span class="d-none d-sm-inline-block">Add Task</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mt-4"></div>
+
+                  <div class="table-responsive">
+                    <table class="table table-bordered w-100 height">
+                      <thead>
+                        <tr>
+                          <th style="font-weight: bold;">Details</th>
+                          <th style="font-weight: bold;">Edit</th>
+                          <th style="font-weight: bold;">Status</th>
+                          <th style="font-weight: bold;">Start Date</th>
+                          <th style="font-weight: bold;">End Date</th>
+                          <th style="font-weight: bold;">Task Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <a
+                              href="javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUser"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-pencil me-3"
+                              href="javascript:void(0);"
+                              tabindex="0"
+                              aria-controls="DataTables_Table_0"
+                              type="button"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edit1"
+                            ></a>
+                          </td>
+                          <td>
+                            <div class="form-switch" style="position: sticky; left: 0;">
+                              <input
+                                class="form-check-input float-start me-3"
+                                type="checkbox"
+                                checked
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-01-29"
+                              id="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-02-04"
+                              id="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>Task 4</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a
+                              href="javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUser1"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-pencil me-3"
+                              href="javascript:void(0);"
+                              tabindex="0"
+                              aria-controls="DataTables_Table_0"
+                              type="button"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edit1"
+                            ></a>
+                          </td>
+                          <td>
+                            <div class="form-switch" style="position: sticky; left: 0;">
+                              <input
+                                class="form-check-input float-start me-3"
+                                type="checkbox"
+                                checked
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-01-15"
+                              readonly
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-01-28"
+                              id="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>Task 3</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a
+                              href="javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUser"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-pencil me-3"
+                              href="javascript:void(0);"
+                              tabindex="0"
+                              aria-controls="DataTables_Table_0"
+                              type="button"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edit1"
+                            ></a>
+                          </td>
+                          <td>
+                            <div class="form-switch" style="position: sticky; left: 0;">
+                              <input
+                                class="form-check-input float-start me-3"
+                                type="checkbox"
+                                checked
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-01-08"
+                              readonly
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-01-14"
+                              id="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>Task 2</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a
+                              href="javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUser"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-pencil me-3"
+                              href="javascript:void(0);"
+                              tabindex="0"
+                              aria-controls="DataTables_Table_0"
+                              type="button"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edit1"
+                            ></a>
+                          </td>
+                          <td>
+                            <div class="form-switch" style="position: sticky; left: 0;">
+                              <input
+                                class="form-check-input float-start me-3 is-moving"
+                                type="checkbox"
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-01-01"
+                              readonly
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-01-07"
+                              id="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>Task 1</td>
+                        </tr>
+
+                        <tr>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasEcommerceCategoryList"
+                aria-labelledby="offcanvasEcommerceCategoryListLabel"
+                aria-modal="true"
+                role="dialog"
+                style="width: 1100px"
+              >
+                <div class="offcanvas-header py-4">
+                  <h5
+                    id="offcanvasEcommerceCategoryListLabel"
+                    class="offcanvas-title"
+                  >
+                    Add Task
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close bg-label-secondary text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body border-top">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <div class="row align-items-center">
+                          <label for="task-type" class="col-form-label col-md-2 col-sm-12"style="font-weight: bold;"
+                            >Task Type*:</label
+                          >
+                          <div class="col-md-6 col-sm-12">
+                            <div class="row">
+                              <div class="col-4 form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="addressLine"
+                                  id="dont_include_address"
+                                  checked
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="dont_include_address"
+                                  >Daily</label
+                                >
+                              </div>
+                              <div class="col-4 form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="addressLine"
+                                  id="optional_address"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="optional_address"
+                                  >Weekly</label
+                                >
+                              </div>
+                              <div class="col-4 form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="addressLine"
+                                  id="required_address"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="required_address"
+                                  >Monthly</label
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Task Name*:</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value=""
+                            id=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Task Description:</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <textarea
+                            class="form-control"
+                            style="height: 100px"
+                            id=""
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-sm-12 row mb-3">
+                        <div class="col-md-3 col-sm-12">
+                          <label for="bs-datepicker-basic" class="form-label"style="font-weight: bold;"
+                            >Start Date*:</label
+                          >
+                        </div>
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            type="text"
+                            id="bs-datepicker-basic"
+                            placeholder="MM/DD/YYYY"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 row mb-3">
+                        <div class="col-md-3 col-sm-12">
+                          <label for="bs-datepicker-format" class="form-label"style="font-weight: bold;"
+                            >End Date*:</label
+                          >
+                        </div>
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            type="text"
+                            id="bs-datepicker-format"
+                            placeholder="DD/MM/YYYY"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-sm-12 row mb-3">
+                        <label for="" class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Min Level*:</label>
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value=""
+                            id="html5-text-input"
+                          />
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <i class="ti ti-info-circle"></i>
+                          <div class="text-muted" style="font-size: smaller">
+                            Minimum level required for the task
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-sm-12 row mb-3">
+                        <label for="" class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Max Level*:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value=""
+                            id="html5-text-input"
+                          />
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <i class="ti ti-info-circle"></i>
+                          <div class="text-muted" style="font-size: smaller">
+                            Maximum level required for the task
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Experience*:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value=""
+                            id=""
+                          />
+                        </div>
+                        <div class="mb-0 d-flex align-items-center">
+                          <i class="ti ti-info-circle"></i>
+                          <div class="text-muted" style="font-size: smaller">
+                            Experience earned when the task is completed
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Gained Coin:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value=""
+                            id=""
+                          />
+                        </div>
+                        <div class="mb-0 d-flex align-items-center">
+                          <i class="ti ti-info-circle"></i>
+                          <div class="text-muted" style="font-size: smaller">
+                            Coins to be earned if successful
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="exampleFormControlSelect1"
+                          class="col-form-label col-md-3 col-sm-12 text-start"style="font-weight: bold;"
+                          >Trophy:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <select
+                            class="form-select"
+                            id="exampleFormControlSelect1"
+                            aria-label="Default select example"
+                          >
+                            <option selected="" value="1">Choose..</option>
+                            <option>Trophy 1</option>
+                            <option>Trophy 2</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="alert alert-dark mb-4 w-100" role="alert"style="font-weight: bold;">
+                        Requirements
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="task-select"
+                          class="col-form-label col--md-3 col-sm-12 text-start"style="font-weight: bold;"
+                          >Tasks:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <select
+                            class="form-select"
+                            id="task-select"
+                            aria-label="Default select example"
+                          >
+                            <option selected value="">Choose..</option>
+                            <option value="course_completion">
+                              Course Completion
+                            </option>
+                            <option value="solving_quiz">Solving Quiz</option>
+                            <option value="playing_games">Playing Games</option>
+                            <option value="learning_words">
+                              Learning Words or Phrases
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- Course Completion -->
+                      <div
+                        id="course_completion"
+                        class="dynamic-section1 d-none"
+                      >
+                        <div class="col-md-4 col-sm-12 alert alert-danger mb-3" role="alert"style="font-weight: bold;">
+                          Course Completion
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="num_courses"
+                              class="col-md-7 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Number of Courses to be Completed*:</label
+                            >
+                            <div class="col-md-5 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                id="num_courses"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="course_duration"
+                              class="col-md-5 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Total Course Duration*:</label
+                            >
+                            <div class="col-md-7 col-sm-12">
+                              <input
+                                type="text"
+                                id="course_duration"
+                                placeholder="HH:MM:SS"
+                                class="form-control"
+                              />
+                            </div>
+                            <div class="mb-0 d-flex align-items-center">
+                              <i class="ti ti-info-circle"></i>
+                              <div
+                                class="text-muted"
+                                style="font-size: smaller"
+                              >
+                                Total minimum duration of courses
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Solving Quiz -->
+                      <div id="solving_quiz" class="dynamic-section1 d-none">
+                        <div class="col-md-4 col-sm-12 alert alert-danger mb-3" role="alert"style="font-weight: bold;">
+                          Solving Quiz
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="quiz_type"
+                              class="col-form-label col-md-3 col-sm-12 text-start"style="font-weight: bold;"
+                              >Quiz Type*:</label
+                            >
+                            <div class="col-md-9 col-sm-12">
+                              <select
+                                class="form-select"
+                                id="quiz_type"
+                                aria-label="Default select example"
+                              >
+                                <option selected value="">Choose..</option>
+                                <option>Course Quiz</option>
+                                <option>Game Quiz</option>
+                                <option>Educational Quiz</option>
+                                <option>Feed Quiz</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label for="experience" class="col-md-5 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Required Experience*:</label
+                            >
+                            <div class="col-md-7 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                id="experience"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Playing Games -->
+                      <div id="playing_games" class="dynamic-section1 d-none">
+                        <div class="col-md-4 col-sm-12 alert alert-danger mb-3" role="alert"style="font-weight: bold;">
+                          Playing Games
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="game_type"
+                              class="col-form-label col-md-4 col-sm-12 text-start"style="font-weight: bold;"
+                              >Game Type*:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <select
+                                class="form-select"
+                                id="game_type"
+                                aria-label="Default select example"
+                              >
+                                <option selected value="">Choose..</option>
+                                <option>Challenge</option>
+                                <option>Word Game</option>
+                                <option>Word Filling</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="successful_games"
+                              class="col-md-6 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Number of Successful Games*:</label
+                            >
+                            <div class="col-md-6 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                id="successful_games"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Learning Words or Phrases -->
+                      <div id="learning_words" class="dynamic-section1 d-none">
+                        <div class="col-md-4 col-sm-12 alert alert-danger mb-3" role="alert"style="font-weight: bold;">
+                          Learning Words or Phrases
+                        </div>
+                        <div class="col-md-6 col-sm-12 mb-3 row">
+                          <label for="word_count" class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                            >Word Count*:</label
+                          >
+                          <div class="col-md-9 col-sm-12">
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="word_count"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div lang="mt-4"></div>
+                    <form>
+                    <div class="mb-3 text-end">
+                      <button
+                        type="submit"
+                        class="btn btn-primary me-sm-3 me-1 data-submit waves-effect waves-light"
+                      >
+                        SAVE
+                      </button>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="edit1"
+                aria-labelledby="offcanvasEcommerceCategoryListLabel"
+                aria-modal="true"
+                role="dialog"
+                style="width: 1100px"
+              >
+                <div class="offcanvas-header py-4">
+                  <h5
+                    id="offcanvasEcommerceCategoryListLabel"
+                    class="offcanvas-title"
+                  >
+                    Update Task
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close bg-label-secondary text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body border-top">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <div class="row align-items-center">
+                          <label for="task-type" class="col-form-label col-md-2 col-sm-12"style="font-weight: bold;"
+                            >Task Type*:</label
+                          >
+                          <div class="col-md-6 col-sm-12">
+                            <div class="row">
+                              <div class="col-4 form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="addressLine"
+                                  id="required_address"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="dont_include_address"
+                                  >Daily</label
+                                >
+                              </div>
+                              <div class="col-4 form-checked">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="addressLine"
+                                  id="dont_include_address"
+                                  checked
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="optional_address"
+                                  >Weekly</label
+                                >
+                              </div>
+                              <div class="col-4 form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="addressLine"
+                                  id="required_address"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="required_address"
+                                  >Monthly</label
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Task Name*:</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value="Task 1"
+                            id=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-4 col-form-label"style="font-weight: bold;"
+                          >Task Description:</label
+                        >
+                        <div class="col-md-8 col-sm-12">
+                          <textarea
+                            class="form-control"
+                            style="height: 100px"
+                            id=""
+                          >
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-sm-12 row mb-3">
+                        <div class="col-md-3 col-sm-12">
+                          <label for="bs-datepicker-basic" class="form-label"style="font-weight: bold;"
+                            >Start Date*:</label
+                          >
+                        </div>
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            type="text"
+                            id="bs-datepicker-basic"
+                            value="01/01/2024"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 row mb-3">
+                        <div class="col-md-3 col-sm-12">
+                          <label for="bs-datepicker-format" class="form-label"style="font-weight: bold;"
+                            >End Date*:</label
+                          >
+                        </div>
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            type="text"
+                            id="bs-datepicker-format"
+                            value="07/01/2024"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 row mb-3">
+                        <label for="" class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Min Level*:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value="5"
+                            id="html5-text-input"
+                          />
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <i class="ti ti-info-circle"></i>
+                          <div class="text-muted" style="font-size: smaller">
+                            Minimum level required for the task
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 row mb-3">
+                        <label for="" class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Max Level*:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value="10"
+                            id="html5-text-input"
+                          />
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <i class="ti ti-info-circle"></i>
+                          <div class="text-muted" style="font-size: smaller">
+                            Maximum level required for the task
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Experience*:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value="100 Exp"
+                            id=""
+                          />
+                        </div>
+                        <div class="mb-0 d-flex align-items-center">
+                          <i class="ti ti-info-circle"></i>
+                          <div class="text-muted" style="font-size: smaller">
+                            Experience earned when the task is completed
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                          >Gained Coin:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value="100 oin"
+                            id=""
+                          />
+                        </div>
+                        <div class="mb-0 d-flex align-items-center">
+                          <i class="ti ti-info-circle"></i>
+                          <div class="text-muted" style="font-size: smaller">
+                            Coins to be earned if successful
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="exampleFormControlSelect1"
+                          class="col-form-label col-3 text-start"style="font-weight: bold;"
+                          >Trophy:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <select
+                            class="form-select"
+                            id="exampleFormControlSelect1"
+                            aria-label="Default select example"
+                          >
+                            <option selected="" value="1">Choose..</option>
+                            <option>Trophy 1</option>
+                            <option>Trophy 2</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="alert alert-dark mb-4 w-100" role="alert"style="font-weight: bold;">
+                        Requirements
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="task-select1"
+                          class="col-form-label col-md-3 col-sm-12 text-start"style="font-weight: bold;"
+                          >Tasks:</label
+                        >
+                        <div class="col-md-9 col-sm-12">
+                          <select
+                            class="form-select"
+                            id="task-select1"
+                            aria-label="Default select example"
+                          >
+                            <option value="">Choose..</option>
+                            <option selected value="course_completion1">
+                              Course Completion
+                            </option>
+                            <option value="solving_quiz1">Solving Quiz</option>
+                            <option value="playing_games1">
+                              Playing Games
+                            </option>
+                            <option value="learning_words1">
+                              Learning Words or Phrases
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- Course Completion -->
+                      <div id="course_completion1" class="dynamic-section2">
+                        <div class="col-md-4 col-sm-12 alert alert-danger mb-3" role="alert"style="font-weight: bold;">
+                          Course Completion
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="num_courses"
+                              class="col-md-7 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Number of Courses to be Completed*:</label
+                            >
+                            <div class="col-md-5 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                id="num_courses"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="course_duration"
+                              class="col-md-5 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Total Course Duration*:</label
+                            >
+                            <div class="col-md-7 col-sm-12">
+                              <input
+                                type="text"
+                                id="course_duration"
+                                placeholder="HH:MM:SS"
+                                class="form-control"
+                              />
+                            </div>
+                            <div class="mb-0 d-flex align-items-center">
+                              <i class="ti ti-info-circle"></i>
+                              <div
+                                class="text-muted"
+                                style="font-size: smaller"
+                              >
+                                Total minimum duration of courses
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Solving Quiz -->
+                      <div id="solving_quiz1" class="dynamic-section2 d-none">
+                        <div class="col-md-4 col-sm-12 alert alert-danger mb-3" role="alert"style="font-weight: bold;">
+                          Solving Quiz
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="quiz_type"
+                              class="col-form-label col-md-3 col-sm-12 text-start"style="font-weight: bold;"
+                              >Quiz Type*:</label
+                            >
+                            <div class="col-md-9 col-sm-12">
+                              <select
+                                class="form-select"
+                                id="quiz_type"
+                                aria-label="Default select example"
+                              >
+                                <option selected value="">Choose..</option>
+                                <option>Course Quiz</option>
+                                <option>Game Quiz</option>
+                                <option>Educational Quiz</option>
+                                <option>Feed Quiz</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label for="experience" class="col-md-5 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Required Experience*:</label
+                            >
+                            <div class="col-md-7 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                id="experience"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Playing Games -->
+                      <div id="playing_games1" class="dynamic-section2 d-none">
+                        <div class="col-md-4 col-sm-12 alert alert-danger mb-3"style="font-weight: bold;" role="alert">
+                          Playing Games
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="game_type"
+                              class="col-form-label col-md-3 col-sm-12 text-start"style="font-weight: bold;"
+                              >Game Type*:</label
+                            >
+                            <div class="col-md-9 col-sm-12">
+                              <select
+                                class="form-select"
+                                id="game_type"
+                                aria-label="Default select example"
+                              >
+                                <option selected value="">Choose..</option>
+                                <option>Challenge</option>
+                                <option>Word Game</option>
+                                <option>Word Filling</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="successful_games"
+                              class="col-md-5 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Number of Successful Games*:</label
+                            >
+                            <div class="col-md-7 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                id="successful_games"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Learning Words or Phrases -->
+                      <div id="learning_words1" class="dynamic-section2 d-none">
+                        <div class="col-md-4 col-sm-12 alert alert-danger mb-3"style="font-weight: bold;" role="alert">
+                          Learning Words or Phrases
+                        </div>
+                        <div class="col-md-6 col-sm-12 mb-3 row">
+                          <label for="word_count" class="col-md-3 col-sm-12 col-form-label"style="font-weight: bold;"
+                            >Word Count*:</label
+                          >
+                          <div class="col-md-9 col-sm-12">
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="word_count"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div lang="mt-4"></div>
+                    <form>
+                    <div class="mb-3 text-end">
+                      <button
+                        type="submit"
+                        class="btn btn-primary me-sm-3 me-1 data-submit waves-effect waves-light"
+                      >
+                        UPDATE
+                      </button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+
+              <!--Details-->
+              <div
+                class="modal fade"
+                id="editUser"
+                tabindex="-1"
+                style="display: none"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-xl modal-simple modal-edit-user">
+                  <div class="modal-content p-2000 p-2000">
+                    <div class="modal-body">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                      <h5 class="card-header"style="font-weight: bold;">Task Details</h5>
+                      <div class="mt-4"></div>
+                      <div class="card-body">
+                        <div class="col-md-6 col-sm-12 mb-3 row">
+                          <label
+                            for="html5-text-input"
+                            class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                            >Task Type:</label
+                          >
+                          <div class="col-md-8 col-sm-12">
+                            <input
+                              class="form-control"
+                              type="text"
+                              value="Weekly "
+                              id=""
+                              readonly=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Task Name:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="Task 1"
+                                id=""
+                                readonly=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Task Description:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <textarea
+                                class="form-control"
+                                style="height: 100px"
+                                id=""
+                                readonly
+                              >
+“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea
+                              >
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Start Date:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value=" 01  / 01 / 2024"
+                                id=""
+                                readonly=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >End Date:</label
+                            >
+                            <div class="col-md-8 col-sm">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="07/ 01 / 2024"
+                                id=""
+                                readonly=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Min Level :</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="5"
+                                id=""
+                                readonly=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm--12 col-form-label"style="font-weight: bold;"
+                              >Max Level:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="10"
+                                id=""
+                                readonly=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Experience:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="100 exp"
+                                id=""
+                                readonly=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Gained Coin:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="100 Coin"
+                                id=""
+                                readonly=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="alert alert-dark mb-0 w-100" role="alert"style="font-weight: bold;">
+                        Requirements
+                      </div>
+                      <div class="col-md-4 col-sm-12 mt-4 alert alert-danger" role="alert"style="font-weight: bold;">
+                        Course Completion
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row align-items-center">
+                        <div class="col-md-8 col-sm-12">
+                          <label class="col-form-label"style="font-weight: bold;"
+                            >Number of Courses to be Completed:</label
+                          >
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                          <p class="form-control-plaintext">2</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row align-items-center">
+                        <div class="col-md-5 col-sm-12">
+                          <label class="col-form-label"style="font-weight: bold;"
+                            >Total Course Duration:</label
+                          >
+                        </div>
+                        <div class="col-md-7 col-sm-12">
+                          <p class="form-control-plaintext">50 Minute</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-backdrop fade"></div>
+            </div>
+          </div>
+
+          <div class="layout-overlay layout-menu-toggle"></div>
+          <div class="drag-target"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="assets/vendor/libs/popper/popper.js"></script>
+    <script src="assets/vendor/js/bootstrap.js"></script>
+    <script src="assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="assets/vendor/js/menu.js"></script>
+
+    <!-- Vendors JS -->
+    <script src="assets/vendor/libs/quill/katex.js"></script>
+    <script src="assets/vendor/libs/quill/quill.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script>
+      $(document).ready(function () {
+        $("#task-select").change(function () {
+          var selectedValue = $(this).val();
+          $(".dynamic-section1").addClass("d-none"); // Hide all sections
+          if (selectedValue) {
+            $("#" + selectedValue).removeClass("d-none"); // Show selected section
+          }
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#task-select1").change(function () {
+          var selectedValue = $(this).val();
+          $(".dynamic-section2").addClass("d-none"); // Hide all sections
+          if (selectedValue) {
+            $("#" + selectedValue).removeClass("d-none"); // Show selected section
+          }
+        });
+      });
+    </script>
+    <script>
+      // Full Toolbar
+      // --------------------------------------------------------------------
+      const fullToolbar = [
+        [
+          {
+            font: [],
+          },
+          {
+            size: [],
+          },
+        ],
+        ["bold", "italic", "underline", "strike"],
+        [
+          {
+            color: [],
+          },
+          {
+            background: [],
+          },
+        ],
+        [
+          {
+            script: "super",
+          },
+          {
+            script: "sub",
+          },
+        ],
+        [
+          {
+            header: "1",
+          },
+          {
+            header: "2",
+          },
+          "blockquote",
+          "code-block",
+        ],
+        [
+          {
+            list: "ordered",
+          },
+          {
+            list: "bullet",
+          },
+          {
+            indent: "-1",
+          },
+          {
+            indent: "+1",
+          },
+        ],
+        [{ direction: "rtl" }],
+        ["link", "image", "video", "formula"],
+        ["clean"],
+      ];
+    </script>
+  </body>
+</html>

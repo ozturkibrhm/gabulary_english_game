@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="assets/"
+  data-template="vertical-menu-template-no-customizer"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/vendor/libs/quill/typography.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/quill/katex.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/quill/editor.css" />
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
+
+    <title>Tables - Basic Tables | Vuexy - Bootstrap Admin Template</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/img/favicon/favicon.ico"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="assets/vendor/fonts/tabler-icons.css" />
+    <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/rtl/core.css" />
+    <link rel="stylesheet" href="assets/vendor/css/rtl/theme-default.css" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/node-waves/node-waves.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/libs/typeahead-js/typeahead.css"
+    />
+    <link rel="stylesheet" href="assets/vendor/libs/dropzone/dropzone.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assets/js/config.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function openOffcanvas(offcanvasId) {
+        const offcanvas = new bootstrap.Offcanvas(
+          document.getElementById(offcanvasId)
+        );
+        offcanvas.show();
+      }
+    </script>
+  </head>
+
+  <body class style>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside
+          id="layout-menu"
+          class="layout-menu menu-vertical menu bg-menu-theme"
+        >
+          <div class="app-brand demo">
+            <a href="basic-category-management.html" class="app-brand-link">
+              <span class="app-brand-text demo menu-text fw-bold"
+                >GABULARY</span
+              >
+            </a>
+
+            <a
+              href="javascript:void(0);"
+              class="layout-menu-toggle menu-link text-large ms-auto"
+            >
+              <i
+                class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"
+              ></i>
+              <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <li class="menu-item">
+              <a href="index.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Dashboard" style="margin-left: 10px">
+                  Dashboard
+                </div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Basic Settings" style="margin-left: 10px">
+                  Basic Settings
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="basic-category-management.html" class="menu-link">
+                    <div data-i18n="Category Management">
+                      Category Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-level-range-management.html" class="menu-link">
+                    <div data-i18n="Level Range Management">
+                      Level Range Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-level-exp-management.html" class="menu-link">
+                    <div data-i18n="Level-Exp. Management">
+                      Level-Exp. Management
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="basic-prize-management.html" class="menu-link">
+                    <div data-i18n="Prize Management">Prize Management</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Layouts -->
+            <li class="menu-item">
+              <a href="vocabulary-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div
+                  data-i18n="Vocabulary Management"
+                  style="margin-left: 10px"
+                >
+                  Vocabulary Management
+                </div>
+              </a>
+            </li>
+            <!-- e-commerce-app menu start -->
+            <li class="menu-item active open">
+              <a href="quiz-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Quiz Management" style="margin-left: 10px">
+                  Quiz Management
+                </div>
+              </a>
+            </li>
+            <!-- Academy menu start -->
+            <li class="menu-item">
+              <a href="course-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Course Management" style="margin-left: 10px">
+                  Course Management
+                </div>
+              </a>
+            </li>
+            <!-- Academy menu end -->
+            <li class="menu-item">
+              <a href="game-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Game Management" style="margin-left: 10px">
+                  Game Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="task-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Task Management" style="margin-left: 10px">
+                  Task Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="video-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Video Management" style="margin-left: 10px">
+                  Video Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Store Management" style="margin-left: 10px">
+                  Store Management
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="store-item-management.html" class="menu-link">
+                    <div data-i18n="Item Management">Item Management</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="store-campaing-management.html" class="menu-link">
+                    <div data-i18n="Campaign Management">
+                      Campaign Management
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="avatar-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Avatar Management" style="margin-left: 10px">
+                  Avatar Management
+                </div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="ti ti-folder-open"></i>
+                <div
+                  data-i18n="Help & Support and Policy Management"
+                  style="margin-left: 10px"
+                >
+                  Help & Support and Policy Management
+                </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="help-support.html" class="menu-link">
+                    <div data-i18n="Help & Support">Help & Support</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="help-policy%20.html" class="menu-link">
+                    <div data-i18n="Policy">Policy</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a href="user-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="User Management" style="margin-left: 10px">
+                  User Management
+                </div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="payment-management.html" class="menu-link">
+                <i class="ti ti-folder-open"></i>
+                <div data-i18n="Payment Management" style="margin-left: 10px">
+                  Payment Management
+                </div>
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+        <div class="layout-page">
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div
+              class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none"
+            >
+              <a
+                class="nav-item nav-link px-0 me-xl-4"
+                href="javascript:void(0)"
+              >
+                <i class="ti ti-menu-2 ti-sm"></i>
+              </a>
+            </div>
+
+            <div
+              class="navbar-nav-right d-flex align-items-center"
+              id="navbar-collapse"
+            >
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a
+                    class="nav-link dropdown-toggle hide-arrow"
+                    href="javascript:void(0);"
+                    data-bs-toggle="dropdown"
+                  >
+                    <div class="avatar avatar-online">
+                      <img
+                        src="assets/img/avatars/1.png"
+                        alt=""
+                        class="h-auto rounded-circle"
+                      />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-account.html"
+                      >
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <img
+                                src="assets/img/avatars/1.png"
+                                alt=""
+                                class="h-auto rounded-circle"
+                              />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-medium d-block">John Doe</span>
+                            <small class="text-muted">Admin</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-profile-user.html">
+                        <i class="ti ti-user-check me-2 ti-sm"></i>
+                        <span class="align-middle">My Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-account.html"
+                      >
+                        <i class="ti ti-settings me-2 ti-sm"></i>
+                        <span class="align-middle">Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="pages-account-settings-billing.html"
+                      >
+                        <span class="d-flex align-items-center align-middle">
+                          <i
+                            class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"
+                          ></i>
+                          <span class="flex-grow-1 align-middle">Billing</span>
+                          <span
+                            class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20"
+                            >2</span
+                          >
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-faq.html">
+                        <i class="ti ti-help me-2 ti-sm"></i>
+                        <span class="align-middle">FAQ</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pages-pricing.html">
+                        <i class="ti ti-currency-dollar me-2 ti-sm"></i>
+                        <span class="align-middle">Pricing</span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="auth-login-cover.html"
+                        target="_blank"
+                      >
+                        <i class="ti ti-logout me-2 ti-sm"></i>
+                        <span class="align-middle">Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+
+            <!-- Search Small Screens -->
+            <div class="navbar-search-wrapper search-input-wrapper d-none">
+              <input
+                type="text"
+                class="form-control search-input container-xxl border-0"
+                placeholder="Search..."
+                aria-label="Search..."
+              />
+              <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
+            </div>
+          </nav>
+
+          <div class="content-wrapper">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="card">
+                <div class="card-body">
+                  <div class="mt-4"></div>
+                  <div class="col-12 mb-3 row">
+                    <div class="col-5">
+                      <input
+                        class="form-control"
+                        type="date"
+                        value=""
+                        id="html5-date-input"
+                      />
+                    </div>
+                    <div class="col-5">
+                      <input
+                        class="form-control"
+                        type="date"
+                        value=""
+                        id="html5-date-input"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between app-academy-md-80"
+                  >
+                    <div class="col-11 pe-2 m-n2">
+                      <input
+                        type="search"
+                        placeholder="Enter your text for filtering"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col-lg-1 col-md-1 m-n2">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-icon waves-effect waves-light w-100"
+                      >
+                        Filters
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mt-4"></div>
+                  <div class="d-flex justify-content-end">
+                    <div class="dt-buttons btn-group flex-wrap">
+                      <button
+                        class="btn btn-secondary add-new btn-primary ms-2"
+                        tabindex="0"
+                        aria-controls="DataTables_Table_0"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasEcommerceCategoryList"
+                      >
+                        <span
+                          ><i class="ti ti-plus ti-xs me-0 me-sm-2"></i
+                          ><span class="d-none d-sm-inline-block"
+                            >Add Quiz</span
+                          ></span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mt-4"></div>
+
+                  <div class="table-responsive">
+                    <table class="table table-bordered w-100 height">
+                      <thead>
+                        <tr>
+                          <th style="font-weight: bold;">Details</th>
+                          <th style="font-weight: bold;">Status</th>
+                          <th style="font-weight: bold;">Delete</th>
+                          <th style="font-weight: bold;">Created Date</th>
+                          <th style="font-weight: bold;">Quiz Type</th>
+                          <th style="font-weight: bold;">Quiz Name</th>
+                          <th style="font-weight: bold;">Course/Game/Video Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <a
+                              href=" javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUserr"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <div
+                              class="form-switch"
+                              style="position: sticky; left: 0"
+                            >
+                              <input
+                                class="form-check-input float-start me-3"
+                                type="checkbox"
+                                checked=""
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-trash me-3"
+                              href="javascript:void(0);"
+                              data-bs-toggle="modal"
+                              data-bs-target="#delete"
+                            ></a>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2024-01-03"
+                              id="html5-date-input"
+                              readonly
+                            />
+                          </td>
+                          <td>Course Quiz</td>
+                          <td>Quiz A</td>
+                          <td>How To Speak Easily With</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a
+                              href=" javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUser"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <div
+                              class="form-switch"
+                              style="position: sticky; left: 0"
+                            >
+                              <input
+                                class="form-check-input float-start me-3 is-moving"
+                                type="checkbox"
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-trash me-3"
+                              href="javascript:void(0);"
+                            ></a>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2023-01-02"
+                              readonly
+                            />
+                          </td>
+                          <td>Beginning Quiz</td>
+                          <td>Quiz B</td>
+                          <td>-</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <a
+                              href=" javascript:void(0)"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUserr5"
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <div
+                              class="form-switch"
+                              style="position: sticky; left: 0"
+                            >
+                              <input
+                                class="form-check-input float-start me-3"
+                                type="checkbox"
+                                checked=""
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-trash me-3"
+                              href="javascript:void(0);"
+                            ></a>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2023-01-01"
+                              readonly
+                            />
+                          </td>
+                          <td>Game Quiz</td>
+                          <td>Quiz C</td>
+                          <td>Game B</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a
+                              href=" javascript:void(0)"
+                              data-bs-toggle=""
+                              data-bs-target=""
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <div
+                              class="form-switch"
+                              style="position: sticky; left: 0"
+                            >
+                              <input
+                                class="form-check-input float-start me-3"
+                                type="checkbox"
+                                checked=""
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-trash me-3"
+                              href="javascript:void(0);"
+                            ></a>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2023-01-01"
+                              readonly
+                            />
+                          </td>
+                          <td>Educational Video Quiz</td>
+                          <td>Quiz D</td>
+                          <td>Setting Up I</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a
+                              href=" javascript:void(0)"
+                              data-bs-toggle=""
+                              data-bs-target=""
+                              >Details</a
+                            >
+                          </td>
+                          <td>
+                            <div
+                              class="form-switch"
+                              style="position: sticky; left: 0"
+                            >
+                              <input
+                                class="form-check-input float-start me-3"
+                                type="checkbox"
+                                checked=""
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <a
+                              class="ti ti-trash me-3"
+                              href="javascript:void(0);"
+                            ></a>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="date"
+                              value="2023-01-01"
+                              readonly
+                            />
+                          </td>
+                          <td>Feed Video Quiz</td>
+                          <td>Quiz E</td>
+                          <td>Feed Video 1</td>
+                        </tr>
+
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasEcommerceCategoryList"
+                aria-labelledby="offcanvasEcommerceCategoryListLabel"
+                aria-modal="true"
+                role="dialog"
+                style="width: 1100px"
+              >
+                <div class="offcanvas-header py-4">
+                  <h5
+                    id="offcanvasEcommerceCategoryListLabel"
+                    class="offcanvas-title"
+                  >
+                    Add Quiz
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close bg-label-secondary text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body border-top">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-12 row">
+                        <div class="col-4">
+                          <label class="col-form-label" style="font-weight: bold;">Quiz Type:</label>
+                        </div>
+                        <div class="col-8">
+                          <p class="form-control-plaintext">Beginning Quiz</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-4 col-form-label"style="font-weight: bold;"
+                          >Quiz Name*:</label
+                        >
+                        <div class="col-8">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value=""
+                            id=""
+                            style="height: 100px"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-4 col-form-label"style="font-weight: bold;"
+                          >Quiz Description:</label
+                        >
+                        <div class="col-8">
+                          <textarea
+                            class="form-control"
+                            style="height: 100px"
+                            id=""
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 mb-3 row">
+                        <label
+                          for="html5-text-input"
+                          class="col-4 col-form-label"style="font-weight: bold;"
+                          >Experience*:</label
+                        >
+                        <div class="col-8">
+                          <input
+                            class="form-control"
+                            type="text"
+                            value=""
+                            id=""
+                          />
+                        </div>
+                        <div class="mb-5 d-flex align-items-center">
+                          <i class="ti ti-info-circle"></i>
+                          <div class="text-muted" style="font-size: smaller">
+                            Experience gained when you complete the quiz
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="alert alert-danger mb-0" role="alert" style="font-weight: bold;">
+                          Questions
+                        </div>
+                        <div class="d-flex justify-content-end mt-2">
+                          <span
+                            class="d-none d-sm-inline-block align-self-center me-2"style="font-weight: bold;"
+                            >Add Question</span
+                          >
+                          <div class="dt-buttons btn-group flex-wrap">
+                            <button
+                              class="btn btn-secondary add-new btn-primary ms-2"
+                              tabindex="0"
+                              aria-controls="DataTables_Table_0"
+                              type="button"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasEcommerceCategoryList4"
+                              style="font-weight: bold;"
+                            >
+                              <span><i class="ti ti-plus ti-sm"></i></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mt-2"></div>
+                        <div class="row justify-content-center">
+                          <div class="col-11 table-responsive">
+                            <table class="table table-bordered w-100 height">
+                              <thead>
+                                <tr>
+                                  <th style="font-weight: bold;">Edit</th>
+                                  <th style="font-weight: bold;">Delete</th>
+                                  <th style="font-weight: bold;">Question</th>
+                                  <th style="font-weight: bold;">Correct Answer</th>
+                                  <th style="font-weight: bold;">Options</th>
+                                  <th style="text-align: center; font-weight: bold">Exp</th>
+                                  <th style="font-weight: bold;">Words</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a
+                                      class="ti ti-pencil me-3"
+                                      href="javascript:void(0);"
+                                      tabindex="0"
+                                      aria-controls="DataTables_Table_0"
+                                      type="button"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#edit10"
+                                    ></a>
+                                  </td>
+                                  <td>
+                                    <a
+                                      class="ti ti-trash me-3"
+                                      href="javascript:void(0);"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#delete"
+                                    ></a>
+                                  </td>
+                                  <td class="text-wrap">
+                                    What is the capital city of France?
+                                  </td>
+                                  <td class="text-wrap">Paris</td>
+                                  <td class="text-wrap">
+                                    Paris,London,Berlin,Madrid
+                                  </td>
+                                  <td class="text-wrap">10 Exp</td>
+                                  <td class="text-wrap">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a
+                                      class="ti ti-pencil me-3"
+                                      href="javascript:void(0);"
+                                      tabindex="0"
+                                      aria-controls="DataTables_Table_0"
+                                      type="button"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#edit10"
+                                    ></a>
+                                  </td>
+                                  <td>
+                                    <a
+                                      class="ti ti-trash me-3"
+                                      href="javascript:void(0);"
+                                    ></a>
+                                  </td>
+                                  <td class="text-wrap">
+                                    What is the capital city of France?
+                                  </td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">10 Exp</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a
+                                      class="ti ti-pencil me-3"
+                                      href="javascript:void(0);"
+                                      tabindex="0"
+                                      aria-controls="DataTables_Table_0"
+                                      type="button"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#edit10"
+                                    ></a>
+                                  </td>
+                                  <td>
+                                    <a
+                                      class="ti ti-trash me-3"
+                                      href="javascript:void(0);"
+                                    ></a>
+                                  </td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">10 Exp</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="mt-2"></div>
+                        <form>
+                          <div class="mb-3 text-end">
+                            <button
+                              type="submit"
+                              class="btn btn-primary me-sm-3 me-1 data-submit waves-effect waves-light"
+                            >
+                              SAVE
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasEcommerceCategoryList4"
+                aria-labelledby="offcanvasEcommerceCategoryListLabel"
+                aria-modal="true"
+                role="dialog"
+                style="width: 700px"
+                data-bs-backdrop="static"
+              >
+                <div class="offcanvas-header py-4">
+                  <h5
+                    id="offcanvasEcommerceCategoryListLabel"
+                    class="offcanvas-title"
+                  >
+                    Add Question
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close bg-label-secondary text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body border-top">
+                  <div class="container">
+                    <!-- Full Editor -->
+                    <div class="row mb-3">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6">
+                            <label
+                              for="html5-text-input"
+                              class="col-4 col-form-label"style="font-weight: bold;"
+                              >Question*:</label
+                            >
+                          </div>
+                          <div class="col-6">
+                            <div class="card-body row">
+                              <div id="full-editor">
+                                <p></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /Full Editor -->
+                    <div class="row mb-3">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6">
+                            <label
+                              for="html5-text-input"
+                              class="col-4 col-form-label"style="font-weight: bold;"
+                              >Options*:</label
+                            >
+                          </div>
+                          <div class="col-6">
+                            <div class="card-body">
+                              <div class="d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="option"
+                                    value="1"
+                                    aria-label="Radio button for option 1"
+                                  />
+                                </div>
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Text input for option 1"
+                                  />
+                                </div>
+                              </div>
+                              <div class="d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="option"
+                                    value="2"
+                                    aria-label="Radio button for option 2"
+                                  />
+                                </div>
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Text input for option 2"
+                                  />
+                                </div>
+                              </div>
+                              <div class="d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="option"
+                                    value="3"
+                                    aria-label="Radio button for option 3"
+                                  />
+                                </div>
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Text input for option 3"
+                                  />
+                                </div>
+                              </div>
+                              <div class="d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="option"
+                                    value="4"
+                                    aria-label="Radio button for option 4"
+                                  />
+                                </div>
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Text input for option 4"
+                                  />
+                                </div>
+                              </div>
+                              <div class="d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="option"
+                                    value="5"
+                                    aria-label="Radio button for option 5"
+                                  />
+                                </div>
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Text input for option 5"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Second block -->
+                    <div class="mb-3 row">
+                      <label for="html5-text-input" class="col-6 col-form-label"style="font-weight: bold;"
+                        >Experience*:</label
+                      >
+                      <div class="col-6">
+                        <input
+                          class="form-control"
+                          type="text"
+                          value=""
+                          id=""
+                        />
+                      </div>
+                      <div class="mb-0 d-flex align-items-center">
+                        <i class="ti ti-info-circle"></i>
+                        <div class="text-muted" style="font-size: smaller">
+                          Experience gained when answered correctly
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="alert alert-danger" role="alert" style="font-weight: bold;">Words</div>
+                    <div class="row justify-content-center">
+                      <div class="col-11 row">
+                        <label
+                          for="exampleFormControlSelect1"
+                          class="col-form-label col-sm-2 text-start"style="font-weight: bold;"
+                          >Words:</label
+                        >
+                        <div class="col-sm-10">
+                          <select
+                            class="form-select"
+                            id="exampleFormControlSelect1"
+                            aria-label="Default select example"
+                          >
+                            <option selected="" value="1">Choose Word..</option>
+                            <option>Tree</option>
+                            <option>Three</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <div class="card-body col-11 w-100">
+                          <div class="d-flex align-items-start">
+                            <div
+                              class="d-flex flex-column justify-content-start align-items-center"
+                            >
+                              <!-- İlk boş div ile ilk tablo satırını boş bırakıyoruz -->
+                              <div class="" style="height: 24px"></div>
+                              <i
+                                class="ti ti-circle-minus mt-n2"
+                                type="button"
+                              ></i>
+                              <i
+                                class="ti ti-circle-minus mt-3"
+                                type="button"
+                              ></i>
+                              <i
+                                class="ti ti-circle-minus mt-3"
+                                type="button"
+                              ></i>
+                              <i
+                                class="ti ti-circle-minus mt-3"
+                                type="button"
+                              ></i>
+                            </div>
+
+                            <div class="table-responsive ms-2 w-100">
+                              <table
+                                class="table table-bordered w-100"
+                                style="font-size: small"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td>Word</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr></tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="offcanvas-body d-flex justify-content-end">
+                          <button id="saveBtn1" class="btn btn-primary">SAVE</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="edit10"
+                aria-labelledby="offcanvasEcommerceCategoryListLabel"
+                aria-modal="true"
+                role="dialog"
+                style="width: 700px"
+                data-bs-backdrop="static"
+              >
+                <div class="offcanvas-header py-4">
+                  <h5
+                    id="offcanvasEcommerceCategoryListLabel"
+                    class="offcanvas-title"
+                  >
+                    Update Question
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close bg-label-secondary text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body border-top">
+                  <div class="container">
+                    <!-- Full Editor -->
+                    <div class="row mb-3">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6">
+                            <label
+                              for="html5-text-input"
+                              class="col-4 col-form-label"style="font-weight: bold;"
+                              >Question:</label
+                            >
+                          </div>
+                          <div class="col-6">
+                            <div class="card-body row">
+                              <div id="edit-editor">
+                                <p>
+                                  “Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.
+                                  Ut enim ad minim veniam, quis nostrud
+                                  exercitation ullamco laboris nisi ut aliquip
+                                  ex ea commodo consequat.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /Full Editor -->
+                    <div class="row mb-3">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6">
+                            <label
+                              for="html5-text-input"
+                              class="col-4 col-form-label"style="font-weight: bold;"
+                              >Options*:</label
+                            >
+                          </div>
+                          <div class="col-6">
+                            <div class="card-body">
+                              <div class="d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="option"
+                                    value="1"
+                                    aria-label="Radio button for option 1"
+                                  />
+                                </div>
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Text input for option 1"
+                                  />
+                                </div>
+                              </div>
+                              <div class="d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="option"
+                                    value="2"
+                                    aria-label="Radio button for option 2"
+                                  />
+                                </div>
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Text input for option 2"
+                                  />
+                                </div>
+                              </div>
+                              <div class="d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="option"
+                                    value="3"
+                                    aria-label="Radio button for option 3"
+                                  />
+                                </div>
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Text input for option 3"
+                                  />
+                                </div>
+                              </div>
+                              <div class="d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="option"
+                                    value="4"
+                                    aria-label="Radio button for option 4"
+                                  />
+                                </div>
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Text input for option 4"
+                                  />
+                                </div>
+                              </div>
+                              <div class="d-flex align-items-center mb-2">
+                                <div class="form-check me-2">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="option"
+                                    value="5"
+                                    aria-label="Radio button for option 5"
+                                  />
+                                </div>
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    aria-label="Text input for option 5"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Second block -->
+                    <div class="mb-3 row">
+                      <label for="html5-text-input" class="col-6 col-form-label"style="font-weight: bold;"
+                        >Experience*:</label
+                      >
+                      <div class="col-6">
+                        <input
+                          class="form-control"
+                          type="text"
+                          value=""
+                          id=""
+                        />
+                      </div>
+                      <div class="mb-0 d-flex align-items-center">
+                        <i class="ti ti-info-circle"></i>
+                        <div class="text-muted" style="font-size: smaller">
+                          Experience gained when answered correctly
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-danger" role="alert"style="font-weight: bold;">Words</div>
+                    <div class="row justify-content-center">
+                      <div class="col-11 row">
+                        <label
+                          for="exampleFormControlSelect1"
+                          class="col-form-label col-sm-2 text-start"style="font-weight: bold;"
+                          >Words:</label
+                        >
+                        <div class="col-sm-10">
+                          <select
+                            class="form-select"
+                            id="exampleFormControlSelect1"
+                            aria-label="Default select example"
+                          >
+                            <option selected="" value="1">Choose Word..</option>
+                            <option>Tree</option>
+                            <option>Three</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <div class="card-body col-11 w-100">
+                          <div class="d-flex align-items-start">
+                            <div
+                              class="d-flex flex-column justify-content-start align-items-center"
+                            >
+                              <!-- İlk boş div ile ilk tablo satırını boş bırakıyoruz -->
+                              <div class="" style="height: 24px"></div>
+                              <i
+                                class="ti ti-circle-minus mt-n2"
+                                type="button"
+                              ></i>
+                              <i
+                                class="ti ti-circle-minus mt-3"
+                                type="button"
+                              ></i>
+                              <i
+                                class="ti ti-circle-minus mt-3"
+                                type="button"
+                              ></i>
+                              <i
+                                class="ti ti-circle-minus mt-3"
+                                type="button"
+                              ></i>
+                            </div>
+
+                            <div class="table-responsive ms-2 w-100">
+                              <table
+                                class="table table-bordered w-100"
+                                style="font-size: small"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td>Word</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr></tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="offcanvas-body d-flex justify-content-end">
+                          <button id="saveBtn2" class="btn btn-primary">UPDATE</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Details2-->
+              <div
+                class="modal fade"
+                id="editUser"
+                tabindex="-1"
+                aria-modal="true"
+                role="dialog"
+              >
+                <div
+                  class="modal-dialog modal-dialog-centered modal-simple modal-edit-user"
+                  style="max-width: 90%; width: auto"
+                >
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                      <h5 class="card-header"style="font-weight: bold;">Quiz Details</h5>
+                      <div class="mt-4"></div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="col-md-6 mb-3 row">
+                              <label
+                                for="html5-text-input"
+                                class="col-md-4 col-form-label"style="font-weight: bold;"
+                                >Quiz Status:</label
+                              >
+                              <div class="col-md-8">
+                                <div
+                                  class="form-switch"
+                                  style="position: sticky; left: 0"
+                                >
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    checked=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-form-label"style="font-weight: bold;"
+                              >Quiz Type:</label
+                            >
+                            <div class="col-md-8">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="Beginning Quiz"
+                                readonly=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-form-label"style="font-weight: bold;"
+                              >Quiz Name:</label
+                            >
+                            <div class="col-md-8">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="Beginning Quiz"
+                                readonly=""
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-form-label"style="font-weight: bold;"
+                              >Quiz Description:</label
+                            >
+                            <div class="col-md-8">
+                              <textarea
+                                class="form-control"
+                                style="height: 100px"
+                                readonly=""
+                              >
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea
+                              >
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-form-label"style="font-weight: bold;"
+                              >Experience:</label
+                            >
+                            <div class="col-md-8">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="100 Exp"
+                                readonly=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="alert alert-danger mb-0" role="alert"style="font-weight: bold;">
+                          Questions
+                        </div>
+
+                        <div class="mt-4"></div>
+                        <div class="row justify-content-center">
+                          <div class="col-12 table-responsive">
+                            <table class="table table-bordered w-100">
+                              <thead>
+                                <tr>
+                                  <th style="font-weight: bold; text-align: center">Question</th>
+                                  <th style="font-weight: bold; text-align: center">
+                                    Correct Answer
+                                  </th>
+                                  <th style="font-weight: bold; text-align: center">Options</th>
+                                  <th style="font-weight: bold; text-align: center">Exp</th>
+                                  <th style="font-weight: bold; text-align: center">Words</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="text-wrap">
+                                    What is the capital city of France?
+                                  </td>
+                                  <td class="text-wrap">Paris</td>
+                                  <td class="text-wrap">
+                                    Paris,London,Berlin,Madrid
+                                  </td>
+                                  <td class="text-wrap">10 Exp</td>
+                                  <td class="text-wrap">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-wrap">
+                                    What is the capital city of France?
+                                  </td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">40 Exp</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">50 Exp</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="mt-4"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="modal fade"
+                id="delete"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+                  <div class="modal-content p-2">
+                    <div class="modal-body">
+                      <div class="text-center mb-4">
+                        <p style="font-size: 18px">
+                          It will be permanently deleted. Should the process
+                          continue?
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-end">
+                        <button
+                          type="reset"
+                          class="btn btn-label-secondary btn-reset waves-effect me-2 btn-sm"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          QUIT
+                        </button>
+                        <button
+                          type="reset"
+                          class="btn btn-primary btn-reset waves-effect waves-light btn-sm"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          YES
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="modal fade"
+                id="paragrafModal"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content p-4 shadow-lg rounded">
+                    <div class="modal-header border-0">
+                      <h5 class="modal-title mx-auto fw-bold">
+                        View Paragraph
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-muted text-center" style="font-size: 20px">
+                        Last summer, my family and I _ to a beautiful beach
+                        resort in Florida. We _ at a cozy beachfront villa with
+                        stunning views of the ocean. During the day, we _ in the
+                        clear turquoise waters and built sandcastles on the
+                        beach. In the evenings, we _ delicious seafood dinners
+                        at local restaurants. One memorable day, we _ a boat
+                        tour to explore nearby islands and spot dolphins playing
+                        in the waves. Overall, it was _ vacation we'll always
+                        cherish.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+              class="modal fade"
+              id="editUserr5"
+              tabindex="-1"
+              style="display: none"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog modal-dialog-centered modal-simple modal-edit-user"
+                style="width: 90%; max-width: 1500px"
+              >
+                <div class="modal-content" style="width: 100%; max-width: 7000px;">
+                  <div class="modal-body">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                    <h5 class="card-header" style="font-weight: bold;">Quiz Details</h5>
+                    <div class="mt-4"></div>
+                    <div class="container-fluid">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Quiz Status:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <div class="form-switch" style="position: sticky; left: 0;">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  checked
+                                />
+                              </div>
+                            </div>
+                          </div>
+            
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Quiz Type:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="Game Quiz"
+                                id=""
+                                readonly
+                              />
+                            </div>
+                          </div>
+            
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Game Type:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="Word Game"
+                                id=""
+                                readonly
+                              />
+                            </div>
+                          </div>
+            
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Game Name:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="Game B"
+                                id=""
+                                readonly
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Quiz Name:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="Game B Quiz"
+                                id=""
+                                readonly
+                              />
+                            </div>
+                          </div>
+            
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Quiz Description:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <textarea
+                                class="form-control"
+                                style="height: 100px"
+                                id=""
+                                readonly
+                              >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea
+                              >
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3 row">
+                            <label
+                              for="html5-text-input"
+                              class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;"
+                              >Experience:</label
+                            >
+                            <div class="col-md-8 col-sm-12">
+                              <input
+                                class="form-control"
+                                type="text"
+                                value="100 Exp"
+                                id=""
+                                readonly
+                              />
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class="alert alert-danger mb-0" role="alert"style="font-weight: bold;">
+                          Questions
+                        </div>
+            
+                        <div class="mt-4"></div>
+                        <div class="row justify-content-center">
+                          <div class="col-md-11 col-sm-12 table-responsive">
+                            <table class="table table-bordered w-100 height">
+                              <thead>
+                                <tr>
+                                  <th style="font-weight: bold; text-align: center">
+                                    Question Type
+                                  </th>
+                                  <th style="font-weight: bold; text-align: center">
+                                    Question Content
+                                  </th>
+                                  <th style="font-weight: bold; text-align: center">
+                                    Question Text
+                                  </th>
+                                  <th style="font-weight: bold; text-align: center">
+                                    Answer Type
+                                  </th>
+                                  <th style="font-weight: bold; text-align: center">
+                                    Correct Answer
+                                  </th>
+                                  <th style="font-weight: bold; text-align: center">Options</th>
+                                  <th style="font-weight: bold; text-align: center">
+                                    Gained Exp
+                                  </th>
+                                  <th style="font-weight: bold; text-align: center">
+                                    Question Time
+                                  </th>
+                                  <th style="font-weight: bold; text-align: center">Words</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Photo Question</td>
+                                  <td>
+                                    <a
+                                      href="javascript:void(0)"
+                                      data-bs-toggle="modal"
+                                      data-bs-target=""
+                                      >soru.jpg</a
+                                    >
+                                  </td>
+                                  <td>
+                                    What is the name of the fruit in the
+                                    picture?
+                                  </td>
+                                  <td>Text Based Answer</td>
+                                  <td>Apple</td>
+                                  <td>
+                                    Excepteur sint occaecat cupidatat non
+                                    proident
+                                  </td>
+                                  <td>10 Exp</td>
+                                  <td>10 Sec</td>
+                                  <td>Word</td>
+                                </tr>
+                                <tr>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td>&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="mt-4"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="modal fade" id="editUserr" tabindex="-1" aria-modal="true" role="dialog">
+              <div class="modal-dialog modal-dialog-centered modal-simple modal-edit-user" style="width: 90%; max-width: 1500px;">
+                <div class="modal-content" style="width: 100%;">
+                  <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="card-header" style="font-weight: bold;">Quiz Details</h5>
+                    <div class="mt-4"></div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                          <div class="row mb-3">
+                            <label for="html5-text-input" class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;">Quiz Status:</label>
+                            <div class="col-md-8 col-sm-12">
+                              <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" checked="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12  col-sm-12 mb-3">
+                          <div class="row">
+                            <label for="html5-text-input" class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;">Quiz Type:</label>
+                            <div class="col-md-8 col-sm-12">
+                              <input class="form-control" type="text" value="Course Quiz" readonly="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 mb-3">
+                          <div class="row">
+                            <label for="html5-text-input" class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;">Course Name:</label>
+                            <div class="col-md-8 col-sm-12">
+                              <input class="form-control" type="text" value="How To Speak Easily With Kadir" readonly="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 mb-3">
+                          <div class="row">
+                            <label for="html5-text-input" class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;">Quiz Name:</label>
+                            <div class="col-md-8 col-sm-12">
+                              <input class="form-control" type="text" value="Quiz A" readonly="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 mb-3">
+                          <div class="row">
+                            <label for="html5-text-input" class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;">Quiz Description:</label>
+                            <div class="col-md-8 col-sm-12">
+                              <textarea class="form-control" style="height: 100px" readonly="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 mb-3">
+                          <div class="row">
+                            <label for="html5-text-input" class="col-md-4 col-sm-12 col-form-label"style="font-weight: bold;">Experience:</label>
+                            <div class="col-md-8 col-sm-12">
+                              <input class="form-control" type="text" value="100 Exp" readonly="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 col-sm-12">
+                        <div class="alert alert-danger mb-0" role="alert" style="font-weight: bold;">
+                          Questions
+                        </div>
+                        <div class="mt-4"></div>
+                        <div class="row justify-content-center">
+                          <div class="col-md-12 col-sm-12 table-responsive">
+                            <table class="table table-bordered w-100">
+                              <thead>
+                                <tr>
+                                  <th style="font-weight: bold; text-align: center">Question</th>
+                                  <th style="font-weight: bold; text-align: center">Correct Answer</th>
+                                  <th style="font-weight: bold; text-align: center">Options</th>
+                                  <th style="font-weight: bold; text-align: center">Exp</th>
+                                  <th style="font-weight: bold; text-align: center">Words</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="text-wrap">What is the capital city of France?</td>
+                                  <td class="text-wrap">Paris</td>
+                                  <td class="text-wrap">Paris,London,Berlin,Madrid</td>
+                                  <td class="text-wrap">10 Exp</td>
+                                  <td class="text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                                </tr>
+                                <tr>
+                                  <td class="text-wrap">What is the capital city of France?</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">40 Exp</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                  <td class="text-wrap">50 Exp</td>
+                                  <td class="text-wrap">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="mt-4"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="layout-overlay layout-menu-toggle"></div>
+              <div class="drag-target"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="assets/vendor/libs/popper/popper.js"></script>
+    <script src="assets/vendor/js/bootstrap.js"></script>
+    <script src="assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="assets/vendor/js/menu.js"></script>
+
+    <!-- Vendors JS -->
+    <script src="assets/vendor/libs/dropzone/dropzone.js"></script>
+
+    <script src="assets/vendor/libs/quill/katex.js"></script>
+    <script src="assets/vendor/libs/quill/quill.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script>
+      document.getElementById('saveBtn1').addEventListener('click', function () {
+        var offcanvasEcommerceCategoryList4 = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasEcommerceCategoryList4'));
+        offcanvasEcommerceCategoryList4.hide();
+        var offcanvasEcommerceCategoryList = new bootstrap.Offcanvas(document.getElementById('offcanvasEcommerceCategoryList'));
+        offcanvasEcommerceCategoryList.show();
+      });
+    
+      document.getElementById('saveBtn2').addEventListener('click', function () {
+        var edit10 = bootstrap.Offcanvas.getInstance(document.getElementById('edit10'));
+        edit10.hide();
+        var offcanvasEcommerceCategoryList = new bootstrap.Offcanvas(document.getElementById('offcanvasEcommerceCategoryList'));
+        offcanvasEcommerceCategoryList.show();
+      });
+    </script>
+
+
+
+    <script>
+      // Full Toolbar
+      // --------------------------------------------------------------------
+      const fullToolbar = [
+        [
+          {
+            font: [],
+          },
+          {
+            size: [],
+          },
+        ],
+        ["bold", "italic", "underline", "strike"],
+        [
+          {
+            color: [],
+          },
+          {
+            background: [],
+          },
+        ],
+        [
+          {
+            script: "super",
+          },
+          {
+            script: "sub",
+          },
+        ],
+        [
+          {
+            header: "1",
+          },
+          {
+            header: "2",
+          },
+          "blockquote",
+          "code-block",
+        ],
+        [
+          {
+            list: "ordered",
+          },
+          {
+            list: "bullet",
+          },
+          {
+            indent: "-1",
+          },
+          {
+            indent: "+1",
+          },
+        ],
+        [{ direction: "rtl" }],
+        ["link", "image", "video", "formula"],
+        ["clean"],
+      ];
+      const fullEditor1 = new Quill("#full-editor", {
+        bounds: "#full-editor",
+        placeholder: "Type Something...",
+        modules: {
+          formula: true,
+          toolbar: fullToolbar,
+        },
+        theme: "snow",
+      });
+      const editEditor = new Quill("#edit-editor", {
+        bounds: "#edit-editor",
+        placeholder: "Type Something...",
+        modules: {
+          formula: true,
+          toolbar: fullToolbar,
+        },
+        theme: "snow",
+      });
+    </script>
+  </body>
+</html>
